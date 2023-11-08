@@ -29,7 +29,7 @@ export const createCustomer: RequestHandler = catchAsync(async (req, res) => {
     email: string;
     phone: string;
   };
-  // const newCustomer = await Customer.create(payload);
+  const newCustomer = await Customer.create(payload);
 
   await sendEmail(
     payload.email,
@@ -37,5 +37,5 @@ export const createCustomer: RequestHandler = catchAsync(async (req, res) => {
     `It's a pleasure to have you here with us ${payload.name}`
   );
 
-  return res.status(201).json({ ok: true });
+  return res.status(201).json(newCustomer);
 });
