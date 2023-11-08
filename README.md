@@ -14,7 +14,46 @@ The focus is on showing how developers can build the foundation of a solution th
 
 ## Getting Started
 
-You will need Node.js installed on your machine, as well as access to a Microsoft 365 account as a tenant administrator and a MongoDB instance.
+This project is designed to be up and running quickly with minimal setup. To start using this Showcase application, follow these steps:
+
+### Initial Setup
+
+1. **Install Node.js**: Ensure you have Node.js installed on your machine. If you do not have it installed, download and install it from [nodejs.org](https://nodejs.org/).
+
+2. **Clone the Repository**: Clone this repository to your local machine using `git clone` followed by the URL to this repository.
+
+3. **Install Dependencies**: Navigate to the root directory of the project in your terminal and run `yarn install` to install all the required dependencies.
+
+### Configuration
+
+1. **Environment Variables**: Copy the `.env.dist` file to a new file named `.env` in the same directory. This file should contain all the necessary environment variables required for the project to run.
+
+   ```
+   cp .env.dist .env
+   ```
+
+   Open the `.env` file and fill in the details with your Microsoft 365 credentials and MongoDB URI.
+
+2. **Run the Application**: Once the configuration is set, you can start the application by running the following command in your terminal:
+
+   ```
+   yarn dev
+   ```
+
+   This command will start the development server. Any changes you make to the source code will be automatically reloaded.
+
+### Testing API Endpoints with Postman
+
+The repository includes a `api-doc` file that contains the API configuration for Postman. To import this configuration into Postman, follow these steps:
+
+1. **Open Postman**: Launch the Postman application.
+
+2. **Import API Configuration**: Click on `Import` at the top left corner of the Postman window.
+
+3. **Choose File**: Select the `api-doc` file from the repository and confirm the import. This will set up all the routes in Postman for you to test the API.
+
+By following these steps, you should have a fully configured environment to develop and test your email service with Microsoft 365. Remember to keep your `.env` variables secure and never commit sensitive data to your repository.
+
 
 ## Documentation and Resources
 
